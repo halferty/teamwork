@@ -5,7 +5,7 @@ require 'json'
 
 module Teamwork
 
-  VERSION = "1.0.0"
+  VERSION = "1.0.1"
 
   class API
 
@@ -63,13 +63,13 @@ module Teamwork
 
     def create_project(name, client_name)
       company_id = get_or_create_company(name)
-      @api_conn.post 'projects.json', {
+      @api_conn.post('projects.json', {
           project: {
               name: name,
               companyId: company_id,
               "category-id" => '0'
           }
-      }.headers['id']
+      }).headers['id']
     end
 
     def update_project(id, name, client_name)
