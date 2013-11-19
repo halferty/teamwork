@@ -1,11 +1,10 @@
 require 'faraday'
 require 'faraday_middleware'
-require 'pry'
 require 'json'
 
 module Teamwork
 
-  VERSION = "1.0.2"
+  VERSION = "1.0.5"
 
   class API
 
@@ -62,7 +61,7 @@ module Teamwork
     end
 
     def create_project(name, client_name)
-      company_id = get_or_create_company(name)
+      company_id = get_or_create_company(client_name)
       @api_conn.post('projects.json', {
           project: {
               name: name,
@@ -73,7 +72,7 @@ module Teamwork
     end
 
     def update_project(id, name, client_name)
-      company_id = get_or_create_company(name)
+      company_id = get_or_create_company(client_name)
       @api_conn.put("projects/#{id}.json", {
           project: {
               name: name,
