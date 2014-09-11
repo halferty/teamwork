@@ -7,6 +7,10 @@ A gem wrapper for the TeamworkPM API
 TeamworkPM: http://www.teamworkpm.net/
 API: http://developer.teamworkpm.net/api
 
+== REQUIREMENTS:
+
+    ruby 2.x
+
 == INSTALL:
 
     gem install teamwork
@@ -14,8 +18,8 @@ API: http://developer.teamworkpm.net/api
 == API EXAMPLES:
 
     require 'teamwork'
-
-    api = Teamwork::API.new 'your-site-name', 'your-api-key'
+    
+    api = Teamwork::API.new project_name: 'your-site-name', api_key: 'your-api-key'
 
     api.people pageSize: 100
     api.people pageSize: 100, page: 2
