@@ -2,10 +2,7 @@
 
 == DESCRIPTION:
 
-A gem wrapper for the Teamwork.com
-
-Homepage: http://www.teamwork.com/
-API Docs: http://developer.teamwork.com
+A gem wrapper for the Teamwork.com API. (Homepage: http://www.teamwork.com/ API Docs: http://developer.teamwork.com)
 
 == REQUIREMENTS:
 
